@@ -1,0 +1,3 @@
+include ':learnlifecycle'
+include ':app'
+rootProject.name = "LearnJetpack"
