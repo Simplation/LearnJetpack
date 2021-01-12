@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:paddingTop="10dp"
     android:paddingHorizontal="10dp"
-    tools:context=".MainActivity">
+    tools:context=".MainFragment">
 
-    <Button
-        android:id="@+id/btnStartService"
+    <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Service" />
+        android:text="MainFragment" />
 
     <Button
-        android:id="@+id/btnStopService"
+        android:id="@+id/btnToSecondFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Stop Service" />
+        android:layout_below="@id/tvTitle"
+        android:text="to Second Fragment"
+        android:textAllCaps="false" />
 
-</LinearLayout>
+</RelativeLayout>
