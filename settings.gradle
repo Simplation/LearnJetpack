@@ -1,3 +1,4 @@
+include ':learnviewmodel'
 include ':learnnavigation'
 include ':learnlifecycle'
 include ':app'
