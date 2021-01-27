@@ -1,3 +1,4 @@
+include ':learnlivedata'
 include ':learnviewmodel'
 include ':learnnavigation'
 include ':learnlifecycle'
