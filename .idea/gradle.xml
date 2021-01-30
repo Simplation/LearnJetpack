@@ -13,10 +13,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/learndatabinding" />
             <option value="$PROJECT_DIR$/learnlifecycle" />
             <option value="$PROJECT_DIR$/learnlivedata" />
             <option value="$PROJECT_DIR$/learnnavigation" />
+            <option value="$PROJECT_DIR$/learnpaging" />
+            <option value="$PROJECT_DIR$/learnroom" />
             <option value="$PROJECT_DIR$/learnviewmodel" />
+            <option value="$PROJECT_DIR$/learnworkmanager" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="book"
+            type="com.simplation.learndatabinding.Book" />
+
+        <import type="com.simplation.learndatabinding.BookRatingUtil" />
+        
+        <!--<variable
+            name="EventHandler"
+            type="com.simplation.learndatabinding.BindingMainActivity.EventHandlerListener" />-->
+
+        <variable
+            name="netWorkImage"
+            type="String" />
+
+        <variable
+            name="localImage"
+            type="int" />
+        
+        <variable
+            name="viewModel"
+            type="com.simplation.learndatabinding.TwoWayBindingViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".BindingMainActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{book.title}" />
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{book.author}" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{book.rating}" />
+        <!--android:text="@{BookRatingUtil.Companion.getRatingString(book.rating)}"-->
+
+        <!--<Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click me"
+            android:textAllCaps="false"
+            android:onClick="@{EventHandler::onButtonClicked}"/>-->
+
+        <!-- android:onClick="@{EventHandler::onButtonClicked}" -->
+
+        <include layout="@layout/layout_content"
+            app:book="@{book}"/>
+        <!-- 将数据传递到所包含的布局中 -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:image="@{netWorkImage}"
+            app:defaultImageResource="@{localImage}"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@={viewModel.userName}" />
+        
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
