@@ -15,7 +15,7 @@ class Student {
     var name: String? = null
 
     @ColumnInfo(name = "age", typeAffinity = ColumnInfo.TEXT)
-    var age: String? = null
+    var age: Int = 0
 
     //region Room 默认会使用这个构造器操作数据
     constructor(id: Int, name: String?, age: Int) {
@@ -29,9 +29,11 @@ class Student {
     //region 由于 Room 只能识别一个构造函数，如果希望定义多个构造函数，可以使用 Ignore 标签，让 Room 忽略这个构造器
     // Ignore也可以用于字段, Room 不会持久化被 @Ignore 标签标记过的字段的数据
     @Ignore
-    constructor(name: String?, age: String?) {
+    constructor(name: String?, age: Int?) {
         this.name = name
-        this.age = age
+        if (age != null) {
+            this.age = age
+        }
     }
     //endregion
 }

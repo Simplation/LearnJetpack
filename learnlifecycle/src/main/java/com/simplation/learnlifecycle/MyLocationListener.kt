@@ -11,7 +11,8 @@ import androidx.lifecycle.OnLifecycleEvent
  * Date: 2020/12/29 19:31
  * Description:
  */
-class MyLocationListener(context: Activity, onLocationChangedListener: OnLocationChangedListener) : LifecycleObserver {
+class MyLocationListener(context: Activity, onLocationChangedListener: OnLocationChangedListener) :
+    LifecycleObserver {
 
     private val TAG = MyLocationListener::class.java.simpleName
 

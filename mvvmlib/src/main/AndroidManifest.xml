@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.simplation.mvvmlib">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+        <provider
+            android:name="com.simplation.mvvmlib.base.Ktx"
+            android:authorities="${applicationId}.KtxInstaller"
+            android:exported="false" />
+    </application>
+
+</manifest>

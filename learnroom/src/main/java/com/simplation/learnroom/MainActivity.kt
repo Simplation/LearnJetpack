@@ -41,13 +41,13 @@ class MainActivity : AppCompatActivity() {
         val database = MyDatabase.getInstance(this)
 
         // 增加
-        database.studentDao().insertStudent(Student("name1", "age1"))
+        database.studentDao().insertStudent(Student("name1", 18))
 
         // 删除
-        database.studentDao().deleteStudent(Student("name1", "age1"))
+        database.studentDao().deleteStudent(Student("name1", 18))
 
         // 更新
-        database.studentDao().updateStudent(Student("name1", "age1"))
+        database.studentDao().updateStudent(Student("name1", 21))
 
         // 查询
         /*val students = database.studentDao().getStudentList()

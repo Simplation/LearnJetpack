@@ -8,3 +8,5 @@ include ':learnroom'
 include ':learnworkmanager'
 include ':app'
 rootProject.name = "LearnJetpack"
+include ':jetpackmvvm'
+include ':mvvmlib'

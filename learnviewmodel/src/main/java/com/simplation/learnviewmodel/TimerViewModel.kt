@@ -21,9 +21,7 @@ public class TimerViewModel : ViewModel() {
             val timerTask = object : TimerTask() {
                 override fun run() {
                     currentSecond++
-                    if (onTimeChangeListener != null) {
-                        onTimeChangeListener.onTimeChanged(currentSecond)
-                    }
+                    onTimeChangeListener.onTimeChanged(currentSecond)
                 }
             }
             timer!!.schedule(timerTask, 1000, 1000)
@@ -42,7 +40,7 @@ public class TimerViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
-        // 当ViewModel不再被需要，即与之相关的Activity都被销毁时，该方法会被系统调用。
+        // 当 ViewModel 不再被需要，即与之相关的 Activity 都被销毁时，该方法会被系统调用。
         // 释放资源操作
 
         timer!!.cancel()

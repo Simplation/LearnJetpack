@@ -6,11 +6,7 @@ import androidx.lifecycle.LiveData
 
 class StudentViewModel(application: Application) : AndroidViewModel(application) {
     private var myDatabase: MyDatabase = MyDatabase.getInstance(application)
-    private var liveDataStudent: LiveData<List<Student>>
-
-    init {
-        liveDataStudent = myDatabase.studentDao().getStudentList()
-    }
+    private var liveDataStudent: LiveData<List<Student>> = myDatabase.studentDao().getStudentList()
 
     fun getLiveDataStudent(): LiveData<List<Student>> {
         return liveDataStudent

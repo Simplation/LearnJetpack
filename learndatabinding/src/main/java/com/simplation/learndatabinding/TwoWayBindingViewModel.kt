@@ -1,6 +1,5 @@
 package com.simplation.learndatabinding
 
-import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.databinding.ObservableField
