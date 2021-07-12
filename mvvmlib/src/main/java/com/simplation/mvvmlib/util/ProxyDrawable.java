@@ -1,6 +1,5 @@
 package com.simplation.mvvmlib.util;
 
-
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 

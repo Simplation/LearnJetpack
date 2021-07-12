@@ -38,4 +38,3 @@ fun downLoadExt(downloadResultState: MutableLiveData<DownloadResultState>): OnDo
         }
     }
 }
-

@@ -1,6 +1,6 @@
 package com.simplation.mvvmlib.callback.livedata.event
 
-import com.simplation.mvvmlib.callback.livedata.UnPeekLiveData
+import com.kunminx.architecture.ui.callback.UnPeekLiveData
 
 /**
  * @作者: Simplation

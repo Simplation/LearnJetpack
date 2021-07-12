@@ -3,7 +3,7 @@ package com.simplation.mvvmlib.ext.lifecycle
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
-import com.sunnyit.mvvmlib.ext.util.logd
+import com.simplation.mvvmlib.ext.util.logd
 
 /**
  * @作者: Simplation
@@ -43,5 +43,4 @@ class KtxLifeCycleCallBack : Application.ActivityLifecycleCallbacks {
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {
 
     }
-
 }

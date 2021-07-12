@@ -55,7 +55,7 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
         mViewModel = createViewModel()
         initView(savedInstanceState)
         createObserver()
-        registorDefUIChange()
+        registerDefUIChange()
         initData()
     }
 
@@ -103,7 +103,7 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
             handler.postDelayed({
                 lazyLoadData()
                 // 在 Fragment中，只有懒加载过了才能开启网络变化监听
-                NetworkStateManager.instance.mNetworkStateCallback.observeInFragment(this) {
+                NetworkStateManager.instance.mNetworkStateCallback.observe(this) {
                     // 不是首次订阅时调用方法，防止数据第一次监听错误
                     if (!isFirst) {
                         onNetworkStateChanged(it)
@@ -126,12 +126,12 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
     /**
      * 注册 UI 事件
      */
-    private fun registorDefUIChange() {
-        mViewModel.loadingChange.showDialog.observeInFragment(this) {
+    private fun registerDefUIChange() {
+        mViewModel.loadingChange.showDialog.observe(this) {
             showLoading(it)
         }
 
-        mViewModel.loadingChange.dismissDialog.observeInFragment(this) {
+        mViewModel.loadingChange.dismissDialog.observe(this) {
             dismissLoading()
         }
     }
@@ -143,14 +143,17 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
     protected fun addLoadingObserve(vararg viewModels: BaseViewModel) {
         viewModels.forEach { viewModel ->
             // 显示弹窗
-            viewModel.loadingChange.showDialog.observeInFragment(this) {
+            viewModel.loadingChange.showDialog.observe(this) {
                 showLoading(it)
             }
 
             // 关闭弹窗
-            viewModel.loadingChange.dismissDialog.observeInFragment(this) {
+            viewModel.loadingChange.dismissDialog.observe(this) {
                 dismissLoading()
             }
+            /*viewModel.loadingChange.dismissDialog.observeInFragment(this) {
+                dismissLoading()
+            }*/
         }
     }
 

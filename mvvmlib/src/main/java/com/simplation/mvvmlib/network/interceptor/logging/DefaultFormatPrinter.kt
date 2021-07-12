@@ -4,9 +4,8 @@ import android.text.TextUtils
 import com.simplation.mvvmlib.util.CharacterHandler.Companion.jsonFormat
 import com.simplation.mvvmlib.util.CharacterHandler.Companion.xmlFormat
 import com.simplation.mvvmlib.util.LogUtils
-import com.sunnyit.mvvmlib.network.interceptor.logging.FormatPrinter
-import com.sunnyit.mvvmlib.network.interceptor.logging.LogInterceptor.Companion.isJson
-import com.sunnyit.mvvmlib.network.interceptor.logging.LogInterceptor.Companion.isXml
+import com.simplation.mvvmlib.network.interceptor.logging.LogInterceptor.Companion.isJson
+import com.simplation.mvvmlib.network.interceptor.logging.LogInterceptor.Companion.isXml
 import okhttp3.MediaType
 import okhttp3.Request
 
@@ -22,7 +21,7 @@ class DefaultFormatPrinter : FormatPrinter {
     companion object {
         private const val TAG = "HttpLog"
         private val LINE_SEPARATOR = System.getProperty("line.separator")
-        private val DOUBLE_SEPARATOR = LINE_SEPARATOR + LINE_SEPARATOR
+        private val DOUBLE_SEPARATOR = "$LINE_SEPARATOR$LINE_SEPARATOR"
         private val OMITTED_RESPONSE = arrayOf(LINE_SEPARATOR, "Omitted response body")
         private val OMITTED_REQUEST = arrayOf(LINE_SEPARATOR, "Omitted request body")
         private const val N = "\n"
@@ -193,12 +192,12 @@ class DefaultFormatPrinter : FormatPrinter {
      * @param bodyString
      */
     override fun printJsonRequest(request: Request, bodyString: String) {
-        val requestBody = LINE_SEPARATOR + BODY_TAG + LINE_SEPARATOR + bodyString
+        val requestBody = "$LINE_SEPARATOR$BODY_TAG$LINE_SEPARATOR$bodyString"
         val tag = getTag(true)
         LogUtils.debugInfo(tag, REQUEST_UP_LINE)
         logLines(tag, arrayOf(URL_TAG + request.url()), false)
         logLines(tag, getRequest(request), true)
-        logLines(tag, requestBody.split(LINE_SEPARATOR).toTypedArray(), true)
+        logLines(tag, requestBody.split(LINE_SEPARATOR!!).toTypedArray(), true)
         LogUtils.debugInfo(tag, END_LINE)
     }
 
@@ -249,7 +248,7 @@ class DefaultFormatPrinter : FormatPrinter {
             else -> bodyString
         }
         val responseBody =
-            LINE_SEPARATOR + BODY_TAG + LINE_SEPARATOR + bodyString
+            "$LINE_SEPARATOR$BODY_TAG$LINE_SEPARATOR$bodyString"
         val tag = getTag(false)
         val urlLine = arrayOf<String?>(
             URL_TAG + responseUrl,

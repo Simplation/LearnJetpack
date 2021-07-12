@@ -67,12 +67,13 @@ inline fun <reified VM : BaseViewModel> Fragment.getViewModel(): VM {
 }
 
 /**
- * 在 Fragment 中得到父类Activity的共享ViewModel
+ * 在 Fragment 中得到父类 Activity 的共享 ViewModel
  * 提示，在 fragment 中调用该方法时，请在该 Fragment onCreate 以后调用或者请用 by lazy 方式懒加载初始化调用，不然会提示 requireActivity 没有导致错误
  */
 @Deprecated("已过时的方法，现在可以直接使用 Ktx 函数 activityViewModels() 获取")
 inline fun <reified VM : BaseViewModel> Fragment.getActivityViewModel(): VM {
-    return ViewModelProvider(requireActivity(),
+    return ViewModelProvider(
+        requireActivity(),
         ViewModelProvider.AndroidViewModelFactory(this.requireActivity().application)
     ).get(VM::class.java)
 }

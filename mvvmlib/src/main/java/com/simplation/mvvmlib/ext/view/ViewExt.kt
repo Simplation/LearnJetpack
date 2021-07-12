@@ -122,5 +122,3 @@ fun Any?.notNull(notNullAction: (value: Any) -> Unit, nullAction1: () -> Unit) {
         nullAction1.invoke()
     }
 }
-
-

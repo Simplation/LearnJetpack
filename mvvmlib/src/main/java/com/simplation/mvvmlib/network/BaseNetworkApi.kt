@@ -1,6 +1,6 @@
 package com.simplation.mvvmlib.network
 
-//import me.jessyan.retrofiturlmanager.RetrofitUrlManager
+import me.jessyan.retrofiturlmanager.RetrofitUrlManager
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 

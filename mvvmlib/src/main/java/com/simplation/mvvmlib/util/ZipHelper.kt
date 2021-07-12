@@ -172,7 +172,7 @@ class ZipHelper private constructor() {
                 } catch (rethrown: RuntimeException) {
                     throw rethrown
                 } catch (ingored: Exception) {
-
+                    throw ingored
                 }
             }
         }
