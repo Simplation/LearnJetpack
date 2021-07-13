@@ -6,13 +6,6 @@ import com.google.gson.reflect.TypeToken
 import com.simplation.mvvm.data.model.bean.UserInfo
 import com.tencent.mmkv.MMKV
 
-/**
- * @作者: Simplation
- * @日期: 2021/7/12 17:48
- * @描述:
- * @更新:
- */
-
 object CacheUtil {
     /**
      * 获取保存的账户信息
