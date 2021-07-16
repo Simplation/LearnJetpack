@@ -4,6 +4,36 @@ import android.annotation.SuppressLint
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+/**
+ * Article response
+ *
+ * @property apkLink
+ * @property author
+ * @property chapterId
+ * @property chapterName
+ * @property collect
+ * @property courseId
+ * @property desc
+ * @property envelopePic
+ * @property fresh
+ * @property id
+ * @property link
+ * @property niceDate
+ * @property origin
+ * @property prefix
+ * @property projectLink
+ * @property publishTime
+ * @property superChapterId
+ * @property superChapterName
+ * @property shareUser
+ * @property tags
+ * @property title
+ * @property type
+ * @property userId
+ * @property visible
+ * @property zan
+ * @constructor Create empty Article response
+ */
 @SuppressLint("ParcelCreator")
 @Parcelize
 data class ArticleResponse(
