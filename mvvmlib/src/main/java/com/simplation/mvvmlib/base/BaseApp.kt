@@ -6,12 +6,11 @@ import androidx.lifecycle.ViewModelStore
 import androidx.lifecycle.ViewModelStoreOwner
 
 /**
- * @作者: Simplation
- * @日期: 2021/7/9 15:59
- * @描述:
- * @更新:
+ * Base app
+ *
+ * @constructor Create empty Base app
  */
-class BaseApp : Application(), ViewModelStoreOwner {
+open class BaseApp : Application(), ViewModelStoreOwner {
 
     private lateinit var mViewModelStore: ViewModelStore
     private var mFactory: ViewModelProvider.Factory? = null

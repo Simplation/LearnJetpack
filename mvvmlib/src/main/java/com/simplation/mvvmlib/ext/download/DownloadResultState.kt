@@ -1,12 +1,10 @@
 package com.simplation.mvvmlib.ext.download
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 17:18
- * @描述:
- * @更新:
+ * Download result state
+ *
+ * @constructor Create empty Download result state
  */
-
 sealed class DownloadResultState {
     companion object {
 

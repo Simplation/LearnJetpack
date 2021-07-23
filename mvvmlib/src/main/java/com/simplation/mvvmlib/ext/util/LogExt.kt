@@ -2,13 +2,6 @@ package com.simplation.mvvmlib.ext.util
 
 import android.util.Log
 
-/**
- * @作者: Simplation
- * @日期: 2021/4/20 17:27
- * @描述: 日志打印
- * @更新:
- */
-
 const val TAG = "MvvmLog"
 
 /**

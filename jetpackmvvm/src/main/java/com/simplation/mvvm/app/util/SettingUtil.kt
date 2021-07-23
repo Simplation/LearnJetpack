@@ -12,7 +12,10 @@ import android.view.View
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
+import com.blankj.utilcode.util.Utils
+import com.kingja.loadsir.core.LoadService
 import com.simplation.mvvm.R
+import com.simplation.mvvm.app.weight.loadCallback.LoadingCallback
 import com.tencent.mmkv.MMKV
 import java.lang.reflect.InvocationTargetException
 import kotlin.math.roundToInt
@@ -95,7 +98,7 @@ object SettingUtil {
         return ColorStateList(states, colors)
     }
 
-    private fun getOneColorStateList(color: Int): ColorStateList {
+    fun getOneColorStateList(color: Int): ColorStateList {
         val colors = intArrayOf(color)
         val states = arrayOfNulls<IntArray>(1)
         states[0] = intArrayOf()

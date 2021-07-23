@@ -17,12 +17,10 @@ import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 8:54
- * @描述:
- * @更新:
+ * Character handler
+ *
+ * @constructor Create empty Character handler
  */
-
 class CharacterHandler private constructor() {
     init {
         throw IllegalStateException("you can't instantiate me!")

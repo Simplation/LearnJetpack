@@ -7,12 +7,11 @@ import android.net.ConnectivityManager
 import com.simplation.mvvmlib.network.NetworkUtil
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 16:17
- * @描述: 网络变化接收器
- * @更新:
+ * Network state receiver
+ *      网络变化接收器
+ *
+ * @constructor Create empty Network state receiver
  */
-
 class NetworkStateReceiver : BroadcastReceiver() {
     var isInit = true
 

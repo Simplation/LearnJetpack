@@ -8,13 +8,10 @@ import retrofit2.http.Streaming
 import retrofit2.http.Url
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 15:58
- * @描述:
- * @更新:
+ * Down load service
+ *
+ * @constructor Create empty Down load service
  */
-
-
 interface DownLoadService {
     @Streaming
     @GET

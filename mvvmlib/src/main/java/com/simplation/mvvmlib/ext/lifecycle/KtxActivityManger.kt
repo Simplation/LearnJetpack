@@ -4,12 +4,10 @@ import android.app.Activity
 import java.util.*
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 16:48
- * @描述:
- * @更新:
+ * Ktx activity manger
+ *
+ * @constructor Create empty Ktx activity manger
  */
-
 object KtxActivityManger {
     private val mActivityList = LinkedList<Activity>()
 

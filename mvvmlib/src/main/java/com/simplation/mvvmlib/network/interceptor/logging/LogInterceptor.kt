@@ -15,12 +15,10 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 15:22
- * @描述:
- * @更新:
+ * Log interceptor
+ *
+ * @constructor Create empty Log interceptor
  */
-
 class LogInterceptor : Interceptor {
     private val mPrinter: FormatPrinter = DefaultFormatPrinter()
     private val printLevel = Level.ALL

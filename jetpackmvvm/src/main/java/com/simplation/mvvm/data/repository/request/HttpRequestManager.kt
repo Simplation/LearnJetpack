@@ -51,7 +51,7 @@ class HttpRequestManager {
         isNew: Boolean
     ): ApiResponse<ApiPagerResponse<ArrayList<ArticleResponse>>> {
         return if (isNew) {
-            apiService.getProjecNewData(pageNo)
+            apiService.getProjectNewData(pageNo)
         } else {
             apiService.getProjectDataByType(pageNo, cid)
         }

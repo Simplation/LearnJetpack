@@ -1,5 +1,10 @@
 package com.simplation.mvvmlib.ext.download
 
+/**
+ * Down load progress listener
+ *
+ * @constructor Create empty Down load progress listener
+ */
 interface DownLoadProgressListener {
 
     /**
@@ -13,6 +18,11 @@ interface DownLoadProgressListener {
     fun onUpdate( key: String,progress: Int, read: Long,count: Long,done: Boolean)
 }
 
+/**
+ * On down load listener
+ *
+ * @constructor Create empty On down load listener
+ */
 interface OnDownLoadListener : DownLoadProgressListener {
 
     //等待下载

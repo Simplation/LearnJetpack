@@ -9,13 +9,13 @@ import androidx.databinding.ViewDataBinding
 import com.simplation.mvvmlib.base.viewmodel.BaseViewModel
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/23 10:03
- * @描述: ViewModelFragment 基类，自动把 ViewModel 注入 Fragment 和 Databind 注入进来了
+ * Base vm db fragment
+ *      ViewModelFragment 基类，自动把 ViewModel 注入 Fragment 和 Databind 注入进来了
  * 需要使用 Databind 的请继承它
- * @更新:
+ * @param VM
+ * @param DB
+ * @constructor Create empty Base vm db fragment
  */
-
 abstract class BaseVmDbFragment<VM : BaseViewModel, DB : ViewDataBinding> : BaseVmFragment<VM>() {
     // 该类绑定的 ViewDataBinding
     lateinit var mDataBind: DB

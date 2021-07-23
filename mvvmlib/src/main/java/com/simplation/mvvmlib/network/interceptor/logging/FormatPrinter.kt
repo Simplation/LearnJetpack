@@ -4,12 +4,10 @@ import okhttp3.MediaType
 import okhttp3.Request
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 15:24
- * @描述:
- * @更新:
+ * Format printer
+ *
+ * @constructor Create empty Format printer
  */
-
 interface FormatPrinter {
     /**
      * 打印网络请求信息, 当网络请求时 {[okhttp3.RequestBody]} 可以解析的情况

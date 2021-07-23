@@ -4,7 +4,6 @@ import java.io.Serializable
 
 /**
  * Api pager response
- * 分页数据的基类
  *
  * @param T
  * @property datas

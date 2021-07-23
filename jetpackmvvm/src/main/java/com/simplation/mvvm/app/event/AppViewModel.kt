@@ -9,10 +9,9 @@ import com.simplation.mvvmlib.base.viewmodel.BaseViewModel
 import com.simplation.mvvmlib.callback.livedata.event.EventLiveData
 
 /**
- * @作者: Simplation
- * @日期: 2021/7/12 17:47
- * @描述:
- * @更新:
+ * App view model
+ *
+ * @constructor Create empty App view model
  */
 class AppViewModel : BaseViewModel() {
 

@@ -6,12 +6,10 @@ import kotlinx.coroutines.isActive
 import java.util.concurrent.ConcurrentHashMap
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 15:58
- * @描述:
- * @更新:
+ * Down load pool
+ *
+ * @constructor Create empty Down load pool
  */
-
 object DownLoadPool {
     private val scopeMap: ConcurrentHashMap<String, CoroutineScope> = ConcurrentHashMap()
 

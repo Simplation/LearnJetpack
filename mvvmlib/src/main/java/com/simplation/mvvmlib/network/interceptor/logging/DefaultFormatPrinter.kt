@@ -10,12 +10,10 @@ import okhttp3.MediaType
 import okhttp3.Request
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 15:27
- * @描述:
- * @更新:
+ * Default format printer
+ *
+ * @constructor Create empty Default format printer
  */
-
 class DefaultFormatPrinter : FormatPrinter {
 
     companion object {

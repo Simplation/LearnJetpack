@@ -10,10 +10,9 @@ import java.net.SocketException
 import java.net.URL
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 17:53
- * @描述:
- * @更新:
+ * Network util
+ *
+ * @constructor Create empty Network util
  */
 object NetworkUtil {
     private var url = "http://www.baidu.com"

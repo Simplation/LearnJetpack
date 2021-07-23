@@ -3,10 +3,10 @@ package com.simplation.mvvmlib.network.manager
 import com.simplation.mvvmlib.callback.livedata.event.EventLiveData
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 16:28
- * @描述: 管理网络变化
- * @更新:
+ * Network state manager
+ *      管理网络变化
+ *
+ * @constructor Create empty Network state manager
  */
 class NetworkStateManager private constructor() {
     val mNetworkStateCallback = EventLiveData<NetState>()

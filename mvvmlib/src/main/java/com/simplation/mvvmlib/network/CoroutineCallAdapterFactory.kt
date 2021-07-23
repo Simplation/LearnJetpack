@@ -7,10 +7,9 @@ import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 11:43
- * @描述:
- * @更新:
+ * Coroutine call adapter factory
+ *
+ * @constructor Create empty Coroutine call adapter factory
  */
 class CoroutineCallAdapterFactory private constructor() : CallAdapter.Factory() {
 

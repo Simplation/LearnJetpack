@@ -6,8 +6,14 @@ import com.simplation.mvvmlib.callback.livedata.event.EventLiveData
 /**
  * @作者: Simplation
  * @日期: 2021/4/22 15:15
- * @描述: ViewModel 的基类 使用 ViewModel 类，放弃 AndroidViewModel，原因：用处不大 完全有其他方式获取 Application 上下文
+ * @描述:
  * @更新:
+ */
+/**
+ * Base view model
+ *      ViewModel 的基类 使用 ViewModel 类，放弃 AndroidViewModel，原因：用处不大 完全有其他方式获取 Application 上下文
+ *
+ * @constructor Create empty Base view model
  */
 open class BaseViewModel : ViewModel() {
 

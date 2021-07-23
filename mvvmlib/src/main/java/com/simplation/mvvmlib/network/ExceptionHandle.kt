@@ -8,12 +8,11 @@ import retrofit2.HttpException
 import java.net.ConnectException
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 11:09
- * @描述: 根据异常返回相关的错误信息工具类
- * @更新:
+ * Exception handle
+ *      根据异常返回相关的错误信息工具类
+ *
+ * @constructor Create empty Exception handle
  */
-
 object ExceptionHandle {
 
     fun handleException(e: Throwable?): AppException {

@@ -5,10 +5,9 @@ import android.util.Log
 import com.simplation.mvvmlib.ext.util.MvvmLog
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 16:28
- * @描述:
- * @更新:
+ * Log utils
+ *
+ * @constructor Create empty Log utils
  */
 object LogUtils {
     private const val DEFAULT_TAG = "MvvmLib"

@@ -12,12 +12,10 @@ import java.io.File
 import java.util.concurrent.TimeUnit
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 15:47
- * @描述:
- * @更新:
+ * Download manager
+ *
+ * @constructor Create empty Download manager
  */
-
 object DownloadManager {
     private val retrofitBuilder by lazy {
         Retrofit.Builder()

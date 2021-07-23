@@ -3,12 +3,10 @@ package com.simplation.mvvmlib.util
 import java.lang.IllegalStateException
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 9:08
- * @描述:
- * @更新:
+ * Url encoder utils
+ *
+ * @constructor Create empty Url encoder utils
  */
-
 class UrlEncoderUtils private constructor() {
     init {
         throw IllegalStateException("you can't instantiate me!")

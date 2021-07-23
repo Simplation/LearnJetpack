@@ -15,10 +15,7 @@ import com.simplation.mvvmlib.state.paresResult
 import kotlinx.coroutines.*
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 15:15
- * @描述: BaseViewModel 请求协程的封装
- * @更新:
+ * BaseViewModel 请求协程的封装
  */
 
 /**
@@ -93,7 +90,8 @@ fun <T> BaseViewModel.request(
     block: suspend () -> BaseResponse<T>,
     resultState: MutableLiveData<ResultState<T>>,
     isShowDialog: Boolean = false,
-    loadingMessage: String = "请求网络中..."
+    loadingMessage: String = "请求网络中...",
+    onTokenOut: ((String) -> Unit) ?= null
 ): Job {
     return viewModelScope.launch {
         runCatching {
@@ -162,7 +160,8 @@ fun <T> BaseViewModel.request(
             loadingChange.dismissDialog.postValue(false)
             runCatching {
                 // 校验请求结果码是否正确，不正确会抛出异常走下面的 onFailure
-                executeResponse(it) { t -> success(t)
+                executeResponse(it) { t ->
+                    success(t)
                 }
             }.onFailure { e ->
                 // 打印错误消息

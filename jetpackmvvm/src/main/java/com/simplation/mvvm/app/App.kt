@@ -3,8 +3,16 @@ package com.simplation.mvvm.app
 import android.os.Build
 import androidx.annotation.RequiresApi
 import cat.ereza.customactivityoncrash.config.CaocConfig
+import com.kingja.loadsir.callback.SuccessCallback
+import com.kingja.loadsir.core.LoadSir
 import com.simplation.mvvm.app.event.AppViewModel
 import com.simplation.mvvm.app.event.EventViewModel
+import com.simplation.mvvm.app.ext.getProcessName
+import com.simplation.mvvm.app.weight.loadCallback.EmptyCallback
+import com.simplation.mvvm.app.weight.loadCallback.ErrorCallback
+import com.simplation.mvvm.app.weight.loadCallback.LoadingCallback
+import com.simplation.mvvm.ui.activity.ErrorActivity
+import com.simplation.mvvm.ui.activity.WelcomeActivity
 import com.simplation.mvvmlib.base.BaseApp
 import com.simplation.mvvmlib.ext.util.MvvmLog
 import com.simplation.mvvmlib.ext.util.logd
@@ -12,7 +20,6 @@ import com.tencent.bugly.Bugly
 import com.tencent.bugly.crashreport.CrashReport
 import com.tencent.mmkv.BuildConfig
 import com.tencent.mmkv.MMKV
-
 
 /**
  * App

@@ -6,10 +6,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 17:59
- * @描述: 仅分发 owner observe 后 才新拿到的数据 可避免共享作用域 VM 下 liveData 被 observe 时旧数据倒灌的情况
- * @更新:
+ * Un peek live data
+ *      仅分发 owner observe 后 才新拿到的数据 可避免共享作用域 VM 下 liveData 被 observe 时旧数据倒灌的情况
+ *
+ * @param T
+ * @constructor Create empty Un peek live data
  */
 open class UnPeekLiveData<T> : MutableLiveData<T>() {
     override fun observe(

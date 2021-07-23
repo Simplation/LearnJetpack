@@ -6,12 +6,11 @@ import com.simplation.mvvmlib.network.BaseResponse
 import com.simplation.mvvmlib.network.ExceptionHandle
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 9:57
- * @描述:
- * @更新:
+ * Result state
+ *
+ * @param T
+ * @constructor Create empty Result state
  */
-
 sealed class ResultState<out T> {
     companion object {
         fun <T> onAppSuccess(data: T): ResultState<T> = Success(data)

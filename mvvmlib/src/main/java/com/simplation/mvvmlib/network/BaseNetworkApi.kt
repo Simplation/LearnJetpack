@@ -5,12 +5,11 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/21 11:40
- * @描述: 网络请求构建基类
- * @更新:
+ * Base network api
+ *      网络请求构建基类
+ *
+ * @constructor Create empty Base network api
  */
-
 abstract class BaseNetworkApi {
     fun <T> getApi(serviceClass: Class<T>, baseUrl: String): T {
         val retrofitBuilder = Retrofit.Builder()

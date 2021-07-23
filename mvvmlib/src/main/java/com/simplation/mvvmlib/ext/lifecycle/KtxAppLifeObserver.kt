@@ -6,12 +6,10 @@ import androidx.lifecycle.OnLifecycleEvent
 import com.simplation.mvvmlib.callback.livedata.BooleanLiveData
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 16:37
- * @描述:
- * @更新:
+ * Ktx app life observer
+ *
+ * @constructor Create empty Ktx app life observer
  */
-
 object KtxAppLifeObserver : LifecycleObserver {
     private val isForeground = BooleanLiveData()
 

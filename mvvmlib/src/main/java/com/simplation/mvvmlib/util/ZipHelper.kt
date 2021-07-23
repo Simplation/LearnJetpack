@@ -7,12 +7,10 @@ import java.nio.charset.Charset
 import java.util.zip.*
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 9:08
- * @描述:
- * @更新:
+ * Zip helper
+ *
+ * @constructor Create empty Zip helper
  */
-
 class ZipHelper private constructor() {
 
     init {

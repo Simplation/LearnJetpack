@@ -10,6 +10,7 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.WhichButton
 import com.afollestad.materialdialogs.actions.getActionButton
 import com.afollestad.materialdialogs.lifecycle.lifecycleOwner
+import com.blankj.utilcode.util.ToastUtils
 import com.simplation.mvvm.R
 import com.simplation.mvvm.app.util.CacheUtil
 import com.simplation.mvvm.app.util.SettingUtil

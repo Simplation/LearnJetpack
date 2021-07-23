@@ -19,7 +19,7 @@ object DatetimeUtil {
     /**
      * 获取现在时刻
      */
-    private val now: Date
+    val now: Date
         get() = Date(Date().time)
     /**
      * 获取现在时刻
@@ -49,7 +49,7 @@ object DatetimeUtil {
         return sdf.format(Date(date))
     }
 
-    private fun formatDate(formatStyle: String, formatStr: String): Date {
+    fun formatDate(formatStyle: String, formatStr: String): Date {
         val format = SimpleDateFormat(formatStyle, Locale.CHINA)
         return try {
             val date = Date()

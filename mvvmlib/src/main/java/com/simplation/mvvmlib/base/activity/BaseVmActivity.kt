@@ -9,12 +9,12 @@ import com.simplation.mvvmlib.network.manager.NetState
 import com.simplation.mvvmlib.network.manager.NetworkStateManager
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/23 10:03
- * @描述: ViewModelActivity 基类，把 ViewModel 注入进来了
- * @更新:
+ * Base vm activity
+ *      ViewModelActivity 基类，把 ViewModel 注入进来了
+ *
+ * @param VM
+ * @constructor Create empty Base vm activity
  */
-
 abstract class BaseVmActivity<VM : BaseViewModel> : AppCompatActivity() {
 
     /**

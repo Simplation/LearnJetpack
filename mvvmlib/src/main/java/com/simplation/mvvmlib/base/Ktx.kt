@@ -13,15 +13,15 @@ import com.simplation.mvvmlib.ext.lifecycle.KtxLifeCycleCallBack
 import com.simplation.mvvmlib.network.manager.NetworkStateReceiver
 
 /**
- * @作者: Simplation
- * @日期: 2021/7/9 10:07
- * @描述:
- * @更新:
+ * App context
  */
-
 val appContext: Application by lazy { Ktx.app }
 
-
+/**
+ * Ktx
+ *
+ * @constructor Create empty Ktx
+ */
 class Ktx : ContentProvider() {
     companion object {
         lateinit var app: Application

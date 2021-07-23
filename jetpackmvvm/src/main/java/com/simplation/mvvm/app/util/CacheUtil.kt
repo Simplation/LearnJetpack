@@ -6,6 +6,11 @@ import com.google.gson.reflect.TypeToken
 import com.simplation.mvvm.data.model.bean.UserInfo
 import com.tencent.mmkv.MMKV
 
+/**
+ * Cache util
+ *
+ * @constructor Create empty Cache util
+ */
 object CacheUtil {
     /**
      * 获取保存的账户信息

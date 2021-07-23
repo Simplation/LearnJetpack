@@ -10,12 +10,10 @@ import java.nio.channels.FileChannel
 import java.text.DecimalFormat
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 15:59
- * @描述:
- * @更新:
+ * File tool
+ *
+ * @constructor Create empty File tool
  */
-
 object FileTool {
 
     // 定义 GB 的计算常量

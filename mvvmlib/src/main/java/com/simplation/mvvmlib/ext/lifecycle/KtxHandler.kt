@@ -7,12 +7,13 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.OnLifecycleEvent
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 17:00
- * @描述:
- * @更新:
+ * Ktx handler
+ *
+ * @constructor
+ *
+ * @param lifecycleOwner
+ * @param callback
  */
-
 class KtxHandler(lifecycleOwner: LifecycleOwner, callback: Callback) : Handler(callback),
     LifecycleObserver {
 

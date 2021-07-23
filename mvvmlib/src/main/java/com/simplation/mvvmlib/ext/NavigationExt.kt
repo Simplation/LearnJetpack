@@ -8,13 +8,6 @@ import androidx.navigation.Navigation
 import com.simplation.mvvmlib.navigation.NavHostFragment
 import java.lang.Exception
 
-/**
- * @作者: Simplation
- * @日期: 2021/4/22 14:41
- * @描述:
- * @更新:
- */
-
 fun Fragment.nav(): NavController {
     return NavHostFragment.findNavController(this)
 }

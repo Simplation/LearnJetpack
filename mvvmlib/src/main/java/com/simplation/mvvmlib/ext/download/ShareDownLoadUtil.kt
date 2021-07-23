@@ -6,12 +6,10 @@ import android.os.Build
 import com.simplation.mvvmlib.base.appContext
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 17:13
- * @描述:
- * @更新:
+ * Share down load util
+ *
+ * @constructor Create empty Share down load util
  */
-
 object ShareDownLoadUtil {
     private var path = Build.BRAND + "_" + Build.MODEL + "_" + "download_sp"
     private val sp: SharedPreferences

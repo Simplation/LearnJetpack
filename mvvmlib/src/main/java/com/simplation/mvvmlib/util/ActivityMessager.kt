@@ -18,12 +18,10 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KProperty
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 17:23
- * @描述:
- * @更新:
+ * Activity messenger
+ *
+ * @constructor Create empty Activity messenger
  */
-
 object ActivityMessenger {
     var sRequestCode = 0
         set(value) {

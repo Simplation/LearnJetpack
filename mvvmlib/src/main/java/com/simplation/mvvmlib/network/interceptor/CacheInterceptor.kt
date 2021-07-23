@@ -7,12 +7,12 @@ import okhttp3.Interceptor
 import okhttp3.Response
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 17:44
- * @描述: 缓存拦截器，默认是 7 天
- * @更新:
+ * Cache interceptor
+ *      缓存拦截器，默认是 7 天
+ *
+ * @property day
+ * @constructor Create empty Cache interceptor
  */
-
 class CacheInterceptor(var day: Int = 7) : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {

@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         // applicationId "com.simplation.mvvmlib"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -59,7 +59,7 @@ dependencies {
 
     // LiveData
     api "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"   // 2.2.0
-    // api 'com.kunminx.archi:unpeek-livedata:4.4.1-beta1'
+    // api 'com.kunminx.archi:unpeek-livedata:4.4.1-beta1'  // jcenter
     api 'com.kunminx.arch:unpeek-livedata:6.0.0-beta1'
 
     // Navigation

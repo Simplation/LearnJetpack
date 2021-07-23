@@ -6,12 +6,10 @@ import android.os.Bundle
 import com.simplation.mvvmlib.ext.util.logd
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/20 16:37
- * @描述:
- * @更新:
+ * Ktx life cycle call back
+ *
+ * @constructor Create empty Ktx life cycle call back
  */
-
 class KtxLifeCycleCallBack : Application.ActivityLifecycleCallbacks {
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {

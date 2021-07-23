@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.simplation.mvvmlib.base.viewmodel.BaseViewModel
 import com.simplation.mvvmlib.ext.getVmClazz
@@ -16,12 +17,12 @@ import com.simplation.mvvmlib.network.manager.NetState
 import com.simplation.mvvmlib.network.manager.NetworkStateManager
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/23 10:03
- * @描述: ViewModelFragment 基类，自动把 ViewModel 注入 Fragment
- * @更新:
+ * Base vm fragment
+ *      ViewModelFragment 基类，自动把 ViewModel 注入 Fragment
+ *
+ * @param VM
+ * @constructor Create empty Base vm fragment
  */
-
 abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
     private val handler = Handler()
 
@@ -99,18 +100,15 @@ abstract class BaseVmFragment<VM : BaseViewModel> : Fragment() {
      */
     private fun onVisible() {
         if (lifecycle.currentState == Lifecycle.State.STARTED && isFirst) {
-            // 延迟加载 防止 切换动画还没执行完毕时数据就已经加载好了，这时页面会有渲染卡顿
-            handler.postDelayed({
-                lazyLoadData()
-                // 在 Fragment中，只有懒加载过了才能开启网络变化监听
-                NetworkStateManager.instance.mNetworkStateCallback.observe(this) {
-                    // 不是首次订阅时调用方法，防止数据第一次监听错误
+            lazyLoadData()
+            NetworkStateManager.instance.mNetworkStateCallback.observe(
+                viewLifecycleOwner,
+                Observer {
                     if (!isFirst) {
                         onNetworkStateChanged(it)
                     }
-                }
-                isFirst = false
-            }, lazyLoadTime())
+                })
+            isFirst = false
         }
     }
 

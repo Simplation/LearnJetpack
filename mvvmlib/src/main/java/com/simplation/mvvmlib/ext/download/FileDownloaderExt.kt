@@ -3,12 +3,11 @@ package com.simplation.mvvmlib.ext.download
 import androidx.lifecycle.MutableLiveData
 
 /**
- * @作者: Simplation
- * @日期: 2021/4/22 17:16
- * @描述:
- * @更新:
+ * Down load ext
+ *
+ * @param downloadResultState
+ * @return
  */
-
 fun downLoadExt(downloadResultState: MutableLiveData<DownloadResultState>): OnDownLoadListener {
 
     return object : OnDownLoadListener {
