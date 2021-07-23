@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_main"
+        android:checked="true"
+        android:icon="@mipmap/menu_main"
+        android:title="@string/bottom_name1" />
+
+    <item
+        android:id="@+id/menu_project"
+        android:icon="@mipmap/menu_project"
+        android:title="@string/bottom_name2" />
+
+    <item
+        android:id="@+id/menu_system"
+        android:icon="@mipmap/menu_tree"
+        android:title="@string/bottom_name3" />
+
+    <item
+        android:id="@+id/menu_public"
+        android:icon="@mipmap/menu_public"
+        android:title="@string/bottom_name4" />
+
+    <item
+        android:id="@+id/menu_me"
+        android:icon="@mipmap/menu_me"
+        android:title="@string/bottom_name5" />
+
+</menu>

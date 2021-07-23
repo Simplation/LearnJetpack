@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navation"
+    app:startDestination="@id/mainfragment">
+
+    <fragment
+        android:id="@+id/mainfragment"
+        android:name="com.simplation.mvvm.ui.fragment.MainFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_mainfragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_systemArrFragment"
+            app:destination="@id/systemArrFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_lookInfoFragment"
+            app:destination="@id/lookInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_integralFragment"
+            app:destination="@id/integralFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_collectFragment"
+            app:destination="@id/collectFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_addAriticleFragment"
+            app:destination="@id/addAriticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_ariticleFragment"
+            app:destination="@id/ariticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_todoListFragment"
+            app:destination="@id/todoListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_settingFragment"
+            app:destination="@id/settingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainfragment_to_pagerFragment"
+            app:destination="@id/pagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_demoFragment"
+        app:destination="@id/demoFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.simplation.mvvm.ui.fragment.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_registerFrgment"
+            app:destination="@id/registerFrgment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFrgment"
+        android:name="com.simplation.mvvm.ui.fragment.login.RegisterFrgment"
+        android:label="RegisterFrgment"
+        tools:layout="@layout/fragment_register">
+
+        <action
+            android:id="@+id/action_registerFrgment_to_mainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mainfragment" />
+
+        <action
+            android:id="@+id/action_registerFrgment_to_loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_registerFrgment_to_searchResultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/searchResultFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.simplation.mvvm.ui.fragment.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.simplation.mvvm.ui.fragment.search.SearchResultFragment"
+        android:label="SearchResultFragment"
+        app:startDestination="@id/action_searchResultFragment_to_lookInfoFragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_searchResultFragment_to_lookInfoFragment"
+            app:destination="@id/lookInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/webFragment"
+        android:name="com.simplation.mvvm.ui.fragment.web.WebFragment"
+        android:label="WebFragment"
+        tools:layout="@layout/fragment_web" />
+
+    <fragment
+        android:id="@+id/systemArrFragment"
+        android:name="com.simplation.mvvm.ui.fragment.tree.SystemArrFragment"
+        android:label="SystemArrFragment"
+        app:destination="@id/loginFragment"
+        tools:layout="@layout/fragment_system">
+
+        <action
+            android:id="@+id/action_systemArrFragment_to_lookInfoFragment"
+            app:destination="@id/lookInfoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/lookInfoFragment"
+        android:name="com.simplation.mvvm.ui.fragment.lookinfo.LookInfoFragment"
+        android:label="LookInfoFragment"
+        tools:layout="@layout/fragment_lookinfo" />
+
+    <fragment
+        android:id="@+id/integralFragment"
+        android:name="com.simplation.mvvm.ui.fragment.integral.IntegralFragment"
+        android:label="IntegralFragment"
+        tools:layout="@layout/fragment_integral">
+
+        <action
+            android:id="@+id/action_integralFragment_to_integralHistoryFragment"
+            app:destination="@id/integralHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/integralHistoryFragment"
+        android:name="com.simplation.mvvm.ui.fragment.integral.IntegralHistoryFragment"
+        android:label="IntegralHistoryFragment"
+        tools:layout="@layout/fragment_list" />
+
+    <fragment
+        android:id="@+id/collectFragment"
+        android:name="com.simplation.mvvm.ui.fragment.collect.CollectFragment"
+        android:label="CollectFragment"
+        tools:layout="@layout/fragment_collect" />
+
+    <fragment
+        android:id="@+id/addAriticleFragment"
+        android:name="com.simplation.mvvm.ui.fragment.share.AddAriticleFragment"
+        android:label="AddAriticleFragment"
+        tools:layout="@layout/fragment_share_ariticle" />
+
+    <fragment
+        android:id="@+id/ariticleFragment"
+        android:name="com.simplation.mvvm.ui.fragment.share.AriticleFragment"
+        android:label="AriticleFragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_ariticleFragment_to_addAriticleFragment"
+            app:destination="@id/addAriticleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/todoListFragment"
+        android:name="com.simplation.mvvm.ui.fragment.todo.TodoListFragment"
+        android:label="TodoListFragment"
+        tools:layout="@layout/fragment_list">
+
+        <action
+            android:id="@+id/action_todoListFragment_to_addTodoFragment"
+            app:destination="@id/addTodoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTodoFragment"
+        android:name="com.simplation.mvvm.ui.fragment.todo.AddTodoFragment"
+        android:label="AddTodoFragment"
+        tools:layout="@layout/fragment_addtodo" />
+
+    <fragment
+        android:id="@+id/demoFragment"
+        android:name="com.simplation.mvvm.ui.fragment.demo.DemoFragment"
+        android:label="DemoFragment"
+        tools:layout="@layout/fragment_demo">
+
+        <action
+            android:id="@+id/action_demoFragment_to_downLoadFragment"
+            app:destination="@id/downLoadFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_demoFragment_to_downLoadLibraryFragment"
+            app:destination="@id/downLoadLibraryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_webFragment"
+        app:destination="@id/webFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_to_loginFragment"
+        app:destination="@id/loginFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.simplation.mvvm.ui.fragment.setting.SettingFragment"
+        android:label="SettingFragment"/>
+
+    <fragment
+        android:id="@+id/pagerFragment"
+        android:name="com.simplation.mvvm.ui.fragment.demo.PagerFragment"
+        android:label="PagerFragment"
+        tools:layout="@layout/fragment_pager" />
+
+    <fragment
+        android:id="@+id/downLoadFragment"
+        android:name="com.simplation.mvvm.ui.fragment.demo.DownLoadFragment"
+        android:label="DownLoadFragment"
+        tools:layout="@layout/fragment_download" />
+
+    <fragment
+        android:id="@+id/downLoadLibraryFragment"
+        android:name="com.simplation.mvvm.ui.fragment.demo.DownLoadLibraryFragment"
+        android:label="DownLoadLibraryFragment"
+        tools:layout="@layout/fragment_download_library" />
+
+</navigation>
