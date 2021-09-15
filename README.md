@@ -1,7 +1,7 @@
 # LearnJetpack
 Take Jetpack's notes.
 
-![Jetpack](https://github.com/Simplation/LearnJetpack/blob/main/pic/Jetpack%20%E6%9E%84%E6%88%90.jpg)
+![Jetpack](https://github.com/Simplation/LearnJetpack/blob/master/pic/Jetpack%20%E6%9E%84%E6%88%90.jpg)
 
 - [x] [LearnLifeCycle](https://github.com/Simplation/LearnJetpack/tree/main/learnlifecycle)
 - [x] [LearnNavigation](https://github.com/Simplation/LearnJetpack/tree/main/learnnavigation)
