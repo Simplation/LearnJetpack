@@ -1,12 +1,4 @@
-include ':learnlivedata'
-include ':learnviewmodel'
-include ':learnnavigation'
-include ':learnlifecycle'
-include ':learndatabinding'
-include ':learnpaging'
-include ':learnroom'
-include ':learnworkmanager'
-include ':app'
 rootProject.name = "LearnJetpack"
-include ':jetpackmvvm'
-include ':mvvmlib'
+include(':app', ':learnlivedata', ':learnviewmodel', ':learnnavigation', ':learnlifecycle',
+        ':learndatabinding', ':learnpaging', ':learnroom', ':learnworkmanager', ':jetpackmvvm',
+        ':mvvmlib', ':learnviewpager2')
