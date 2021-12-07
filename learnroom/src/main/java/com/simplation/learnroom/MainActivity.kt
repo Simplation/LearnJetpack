@@ -18,8 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         studentAdapter = StudentAdapter(this, studentList)
-        mBinding.tvContent.layoutManager = LinearLayoutManager(this)
-        mBinding.tvContent.adapter = studentAdapter
+
+        mBinding.tvContent.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = studentAdapter
+        }
 
         initData()
 
@@ -36,8 +39,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun operateFun() {
-
-
         val database = MyDatabase.getInstance(this)
 
         // 增加

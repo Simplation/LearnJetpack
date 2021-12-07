@@ -27,7 +27,7 @@ class StudentAdapter(private val context: Context, private val studentList: Muta
         // 进行数据绑定
         holder.tvId.text = student.name
         holder.tvName.text = student.name
-        holder.tvAge.text = student.age
+        holder.tvAge.text = student.age.toString()
     }
 
     override fun getItemCount(): Int {
