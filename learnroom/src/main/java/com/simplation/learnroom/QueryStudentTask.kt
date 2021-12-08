@@ -1,8 +1,7 @@
 package com.simplation.learnroom
 
 import android.os.AsyncTask
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 //class QueryStudentTask : AsyncTask<Void, Void, Void>() {
 //
@@ -26,6 +25,16 @@ import kotlinx.coroutines.withContext
 //}
 
 class QueryStudentTask {
-    // 使用协程
-    Glo
+
+    private val myDatabase: MyDatabase? = null
+    private val studentAdapter: StudentAdapter? = null
+    private val studentList = mutableListOf<Student>()
+
+    @DelicateCoroutinesApi
+    val job = GlobalScope.launch(Dispatchers.IO) {
+        studentList.clear()
+        studentList.add(myDatabase?.studentDao()?.getStudentById(1)!!)
+        // studentList.addAll(myDatabase?.studentDao().getStudentList())
+        studentAdapter?.notifyDataSetChanged()
+    }
 }
