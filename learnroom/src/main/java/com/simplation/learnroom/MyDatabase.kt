@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [Student::class], version = 1)
+@Database(entities = [Student::class], version = 1, exportSchema = false)
 abstract class MyDatabase : RoomDatabase() {
 
     companion object {
@@ -16,8 +16,24 @@ abstract class MyDatabase : RoomDatabase() {
         private val MIGRATION_1_2 = object : Migration(1, 2) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("")  // 根据业务需要添加相应的 SQL 语句
+                // database.execSQL("ALTER TABLE my_db ADD COLUMN bar_data INTEGER NOT NULL DEFAULT 1")
             }
         }
+
+        //region 删除数据库中的表某一列
+        private val MIGRATION_DROP_ROW = object : Migration(2, 3) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                // 1.创建新表
+                database.execSQL("CREATE TABLE WORD_TEMP(id INTEGER PRIMARY KEY NOT NULL, english_word TEXT, chinese_meaning TEXT)")
+                // 2.查找并插入新表所需要的数据
+                database.execSQL("INSERT INTO WORD_TEMP(id, english_word, chinese_meaning) SELECT id, english_word, chinese_meaning FROM WORD")
+                // 3.删除旧表
+                database.execSQL("DROP TABLE WORD")
+                // 4.对创建的新表进行重命名
+                database.execSQL("ALTER TABLE WORD_TEMP RENAME TO WORD")
+            }
+        }
+        //endregion
 
         fun getInstance(context: Context): MyDatabase {
             if (databaseInstance == null) {

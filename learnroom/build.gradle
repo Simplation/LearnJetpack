@@ -48,12 +48,10 @@ dependencies {
     androidTestImplementation rootProject.ext.dependLibrary["junit-ext"]
     androidTestImplementation rootProject.ext.dependLibrary["espresso-core"]
 
-    implementation 'androidx.room:room-runtime:2.3.0'
-    kapt 'androidx:room:room-compiler:2.2.2'
-    // 用于 Room 的 Kotlin 扩展和协程
-    implementation 'androidx.room:room-ktx:2.3.0'
-    // 测试 Helper
-    testImplementation 'androidx.room:room-testing:2.3.0'
+    def room_version = "2.3.0"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
 
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"

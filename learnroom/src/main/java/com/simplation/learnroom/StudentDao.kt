@@ -12,11 +12,14 @@ interface StudentDao {
     fun deleteStudent(student: Student)
 
     @Update
-    fun updateStudent(student: Student)
+    fun updateStudent(vararg student: Student)
 
     @Query("SELECT * FROM student")
-    fun getStudentList(): LiveData<List<Student>>
+    fun getStudentList(): LiveData<MutableList<Student>>
 
     @Query("SELECT * FROM student WHERE id = :id")
     fun getStudentById(id: Int): Student
+
+    @Query("DELETE FROM STUDENT")
+    fun deleteAllStudents()
 }

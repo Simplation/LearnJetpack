@@ -14,7 +14,7 @@ class Student {
     @ColumnInfo(name = "name", typeAffinity = ColumnInfo.TEXT)
     var name: String? = null
 
-    @ColumnInfo(name = "age", typeAffinity = ColumnInfo.TEXT)
+    @ColumnInfo(name = "age", typeAffinity = ColumnInfo.INTEGER)
     var age: Int = 0
 
     //region Room 默认会使用这个构造器操作数据

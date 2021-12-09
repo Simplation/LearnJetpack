@@ -1,6 +1,7 @@
 package com.simplation.learnroom
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 /**
  * @作者: Simplation
@@ -10,6 +11,8 @@ import androidx.room.Entity
  */
 @Entity(tableName = "colors")
 data class Color(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int,
     val hex: String,
     val name: String
 )

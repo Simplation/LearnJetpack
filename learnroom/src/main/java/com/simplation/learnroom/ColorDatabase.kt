@@ -11,7 +11,7 @@ import androidx.room.RoomDatabase
  * @描述:
  * @更新:
  */
-@Database(entities = [Color::class], version = 1)
+@Database(entities = [Color::class], version = 1, exportSchema = false)
 abstract class ColorDatabase : RoomDatabase() {
     abstract fun colorDao(): ColorDao
 
