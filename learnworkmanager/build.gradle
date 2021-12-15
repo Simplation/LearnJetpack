@@ -49,4 +49,5 @@ dependencies {
     androidTestImplementation rootProject.ext.dependLibrary["espresso-core"]
 
     implementation 'androidx.work:work-runtime:2.5.0'
+    implementation 'androidx.work:work-runtime-ktx:2.5.0'
 }

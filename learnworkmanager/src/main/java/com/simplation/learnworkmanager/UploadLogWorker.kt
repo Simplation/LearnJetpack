@@ -1,10 +1,8 @@
 package com.simplation.learnworkmanager
 
 import android.content.Context
-import androidx.work.Data
-import androidx.work.WorkManager
-import androidx.work.Worker
-import androidx.work.WorkerParameters
+import android.util.Log
+import androidx.work.*
 
 class UploadLogWorker(context: Context, workerParameters: WorkerParameters) :
     Worker(context, workerParameters) {
@@ -16,15 +14,28 @@ class UploadLogWorker(context: Context, workerParameters: WorkerParameters) :
      * 重新执行：Result.retry()
      */
     override fun doWork(): Result {
+        /*Log.d(WORK_MANAGER_TAG, "doWork: started.")
+        Thread.sleep(3000)
+        Log.d(WORK_MANAGER_TAG, "doWork: finished.")
+
         // 取出传递的数据
-        val stringData = inputData.getString("input_string")
-        val intData = inputData.getInt("input_int", 0)
+        val stringData = inputData.getString(INPUT_STRING_KEY)
+        val intData = inputData.getInt(INPUT_INT_KEY, 0)
+
+        Log.d(WORK_MANAGER_TAG, "doWork: $stringData - $intData")
 
         // 任务执行完成后返回数据
-        val outputData = Data.Builder().putString("output_data", "Task Success").build()
+        val returnData = workDataOf(RETURN_KEY to "$stringData - $intData")
+        return Result.success(returnData)*/
 
-
-        return Result.success(outputData)
+        val name = inputData.getString(INPUT_INT_KEY)
+        Thread.sleep(3000)
+        val sp =
+            applicationContext.getSharedPreferences(SHAREDPREFERENCES_KEY, Context.MODE_PRIVATE)
+        var number = sp.getInt(name, 0)
+        Log.d(WORK_MANAGER_TAG, "doWork: $number")
+        sp.edit().putInt(name, ++number).apply()
+        return Result.success(workDataOf(RETURN_KEY to "$name out put"))
     }
     //endregion
 }
