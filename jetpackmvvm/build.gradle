@@ -125,8 +125,8 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
-    // 屏幕适配
-    implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
+    // 屏幕适配 - jcenter 仓库
+    // implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
 
     // 防崩溃
     implementation 'cat.ereza:customactivityoncrash:2.3.0'
