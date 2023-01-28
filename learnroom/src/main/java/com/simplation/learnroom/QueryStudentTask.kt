@@ -30,7 +30,6 @@ class QueryStudentTask {
     private val studentAdapter: StudentAdapter? = null
     private val studentList = mutableListOf<Student>()
 
-    @DelicateCoroutinesApi
     val job = GlobalScope.launch(Dispatchers.IO) {
         studentList.clear()
         studentList.add(myDatabase?.studentDao()?.getStudentById(1)!!)

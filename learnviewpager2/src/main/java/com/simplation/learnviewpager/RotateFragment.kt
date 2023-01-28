@@ -23,6 +23,7 @@ class RotateFragment : Fragment() {
         return rotateBinding.root
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 

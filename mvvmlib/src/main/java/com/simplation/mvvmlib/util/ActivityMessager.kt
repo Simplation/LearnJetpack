@@ -400,6 +400,7 @@ class GhostFragment : Fragment() {
         intent?.let { startActivityForResult(it, requestCode) }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == this.requestCode) {

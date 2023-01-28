@@ -23,6 +23,7 @@ class ScaleFragment : Fragment() {
         return scaleBinding.root
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 

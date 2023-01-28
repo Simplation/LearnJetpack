@@ -24,6 +24,7 @@ class TranslateFragment : Fragment() {
         return translateBinding.root
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
